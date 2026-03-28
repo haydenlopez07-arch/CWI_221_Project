@@ -426,7 +426,8 @@ Define tests for the 22 change scenarios, in addition to the 3 given as examples
     add(0, X) throws no Exception
     add(1, X) throws no Exception
     add(2, X) throws no Exception
-    add(3, X) throws IndexOutOfBoundsException
+    add(3, X) throws no Exception
+	  add(4, X) throws IndexOutOfBoundsException
     removeFirst() returns C
     removeLast() returns B
     remove(C) returns C
@@ -476,7 +477,8 @@ Define tests for the 22 change scenarios, in addition to the 3 given as examples
     add(0, X) throws no Exception
     add(1, X) throws no Exception
     add(2, X) throws no Exception
-    add(3, X) throws IndexOutOfBoundsException
+    add(3, X) throws no Exception
+	  add(4, X) throws IndexOutOfBoundsException
     removeFirst() returns A
     removeLast() returns C
     remove(A) returns A
@@ -526,7 +528,8 @@ Define tests for the 22 change scenarios, in addition to the 3 given as examples
     add(0, X) throws no Exception
     add(1, X) throws no Exception
     add(2, X) throws no Exception
-    add(3, X) throws IndexOutOfBoundsException
+    add(3, X) throws no Exception
+	  add(4, X) throws IndexOutOfBoundsException
     removeFirst() returns A
     removeLast() returns B
     remove(A) returns A
