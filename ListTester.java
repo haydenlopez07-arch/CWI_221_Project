@@ -219,7 +219,7 @@ public class ListTester {
 		// Scenario: 25
 
 		// Scenario: 26
-		testSingleElementList(AB_removeLast_A, "AB_removeLast_A", LIST_AB, STRING_A);
+		testSingleElementList(AB_removeLast_A, "AB_removeLast_A", LIST_A, STRING_A);
 		// Scenario: 27
 
 		// Scenario: 28
@@ -921,9 +921,9 @@ public class ListTester {
 					testAddToFront(scenario.build(), ELEMENT_X, Result.NoException));
 			printTest(scenarioName + "_testAddToRear", testAddToRear(scenario.build(), ELEMENT_X, Result.NoException));
 			printTest(scenarioName + "_testAddAfter" + contentsString.charAt(0),
-					testAddAfter(scenario.build(), contents[0], ELEMENT_X, Result.NoException));
+    				testAddAfter(scenario.build(), contents[0], ELEMENT_X, Result.NoException));
 			printTest(scenarioName + "_testAddAfter" + contentsString.charAt(1),
-					testAddAfter(scenario.build(), contents[1], ELEMENT_X, Result.NoException));
+    				testAddAfter(scenario.build(), contents[1], ELEMENT_X, Result.NoException));
 			printTest(scenarioName + "_testAddAfterX",
 					testAddAfter(scenario.build(), ELEMENT_X, ELEMENT_Z, Result.NoSuchElement));
 			printTest(scenarioName + "_testAdd", testAdd(scenario.build(), ELEMENT_X, Result.NoException));
