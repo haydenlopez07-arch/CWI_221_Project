@@ -61,7 +61,11 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public void add(E element) {
-		addToRear(element);
+		if (rear == array.length) {
+			expandCapacity();
+		}
+		array[rear] = element;
+		rear++;
 		modCount++; // DO NOT REMOVE ME
 	}
 
@@ -202,6 +206,31 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	}
 
 	@Override
+	public int indexOf(E element) {
+		for (int i = 0; i < rear; i++) {
+			if ((array[i] == null && element == null) ||
+				(array[i] != null && array[i].equals(element))) {
+				return i;
+			}
+		}
+		return NOT_FOUND;
+	}
+
+	@Override
+	public boolean contains(E element) {
+		return indexOf(element) != NOT_FOUND;
+	}
+
+	@Override
+	public E remove(E element) {
+		int index = indexOf(element);
+		if (index == NOT_FOUND) {
+			throw new NoSuchElementException();
+		}
+		return remove(index);
+	}
+
+	@Override
 	public String toString() {
 		String result = "[";
 		for (int i = 0; i < rear; i++) {
@@ -210,7 +239,8 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 				result += ", ";
 			}
 		}
-		return result + "]";
+		result += "]";
+		return result;
 	}
 
 	// IGNORE THE FOLLOWING COMMENTED OUT CODE UNTIL LAB 10
