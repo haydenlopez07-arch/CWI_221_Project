@@ -297,12 +297,12 @@ public class ListTester {
 	private IndexedUnsortedList<Integer> newList() {
 		IndexedUnsortedList<Integer> listToUse;
 		switch (LIST_TO_USE) {
-			case goodList:
-				listToUse = new GoodList<Integer>();
-				break;
-			case badList:
-				listToUse = new BadList<Integer>();
-				break;
+			// case goodList:
+			// 	listToUse = new GoodList<Integer>();
+			// 	break;
+			// case badList:
+			// 	listToUse = new BadList<Integer>();
+			// 	break;
 			case arrayList:
 				listToUse = new IUArrayList<Integer>();
 				break;
